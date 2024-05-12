@@ -1,0 +1,23 @@
+[project]
+name = "speedmeter"
+dynamic = ["version"]
+description = "tool to check internet speed"
+readme = "README.md"
+license = {file = "LICENSE"}
+dependencies = [
+  "rich",
+  "requests"
+]
+
+[project.urls]
+Homepage = "https://github.com/gautamajay52/speedmeter"
+
+[project.scripts]
+speedmeter = "speedmeter:main"
+
+[tool.setuptools.dynamic]
+version = {attr = "speedmeter.__version__"}
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
